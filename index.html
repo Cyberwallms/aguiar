@@ -1,143 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<title>Leonardo Lima Aguiar</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leonardo Lima Aguiar</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+        .w3-sidebar { width: 250px; background: #111; padding-top: 20px; }
+        #main { margin-left: 250px; padding: 20px; }
+        .w3-bar-item { padding: 15px; }
+        .w3-container img { border-radius: 50%; margin-bottom: 15px; }
+        @media only screen and (max-width: 768px) {
+            .w3-sidebar { width: 100%; height: auto; position: relative; }
+            #main { margin-left: 0; }
+            .w3-top { display: block; }
+        }
+        .btn-primary { background-color: #009688; padding: 10px 20px; border: none; color: white; border-radius: 5px; text-decoration: none; }
+    </style>
 </head>
 <body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <!-- <img src="eu.PNG" style="width:100%"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>SOBRE</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTATO</p>
-  </a>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-center w3-hide-small">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black"><i class="fa fa-home w3-xxlarge"></i><p>HOME</p></a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-user w3-xxlarge"></i><p>SOBRE</p></a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-envelope w3-xxlarge"></i><p>CONTATO</p></a>
 </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Apresentação</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contato</a>
-  </div>
+<!-- Navbar mobile -->
+<div class="w3-top w3-hide-large w3-hide-medium">
+    <div class="w3-bar w3-black w3-opacity w3-center">
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
+        <a href="#contact" class="w3-bar-item w3-button">CONTATO</a>
+    </div>
 </div>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <img src="eu.png" class="w3-image" width="230" height="230">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Leonardo</span> Lima Aguiar</h1>
-    <p>Programador e Consultor em Defesa Cibernética</p>
-  </header>
+<!-- Main content -->
+<div id="main">
+    <header class="w3-container w3-center" id="home">
+        <img src="eu.png" class="w3-image" width="200" height="200">
+        <h1 class="w3-jumbo">Leonardo Lima Aguiar</h1>
+        <p>Programador e Consultor em Defesa Cibernética</p>
+    </header>
 
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Serviços que ofereço</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> 
-	- <b>Desenvolvimento de Sistemas Web:</b> Criação de sistemas robustos e escaláveis utilizando PHP e Python, totalmente adaptados às necessidades do seu negócio.<br><br>
-	- <b>Machine Learning: </b>Aplicação de inteligência artificial para otimizar processos, análise de dados e tomada de decisões estratégicas.<br><br>
-	- <b>Consultoria em Segurança da Informação: </b>Identificação e mitigação de vulnerabilidades, garantindo que seus dados e sistemas estejam protegidos contra ameaças.<br><br>
-	- <b>Desenvolvimento de Sites: </b>Criação de sites modernos, responsivos e otimizados para SEO, proporcionando uma presença digital profissional e eficiente.<br><br>
-	Cada projeto é desenvolvido de forma personalizada para atender às necessidades específicas do seu negócio. Meu compromisso é oferecer soluções eficientes, seguras e alinhadas aos seus objetivos.
-    </p>
+    <div class="w3-content w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">Serviços</h2>
+        <hr class="w3-opacity">
+        <p>Desenvolvimento de sistemas, Machine Learning, Segurança da Informação e muito mais.</p>
+    </div>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Formação acadêmica e conhecimentos adquiridos</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> 
-	- Tecnologia em Defesa Cibernética – Faculdade Estácio de Sá (2021 a 2023)<br>
-	- Curso de introdução a Atividade de Inteligência Policial (SENASP) <br> 
-	- Curso Intermediário a Atividade de Inteligência Policial (DINTEL) <br> 
-	- Programador em PHP/MySQL e Python (Machine Learning)<br>
-	- Conhecimentos em CSS, HTML5, JavaScript e JSON <br>
-	- Conhecimento e prática em Machine Learning – IA <br>
-	- Uso da informação na Segurança Pública - SENASP, 2023 <br>
-	- Inteligência artificial e computacional – FIAP, 2023 <br>
-	- Crimes Cibernéticos - SENASP, 2022 <br>
-	- Curso de lógica de programação – Fundação Bradesco, 2016 <br>
-	- Administração em rede Linux – TREINATEC, 2010 <br>
-	- Curso de extensão em PHP e JSP - UNIDERP, 2005 <br>
-	- Bacharelado em Ciência da Computação – Centro Universitário UNAES (2002 a 2006)
-    </p>
-   
-    
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">Trabalhos desenvolvidos</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32"></li>
-
-          <li class="w3-padding-16">Sistemas unificados Gesthor <br> (Gestão de Imóveis e Projetos Arquitetônicos, Gestão documental, Capelania Militar e Nexus) <br>
-          <a href="https://pm4pmms.site/pm4/view/" target="_blank">visualizar</a> </li>
-
-          <li class="w3-padding-16">Autor do livro Investigação Forense Computacional – nível I (Amazon) <br>
-          <a href="https://www.amazon.com.br/Investiga%C3%A7%C3%A3o-Forense-Computacional-N%C3%ADvel-I-ebook/dp/B07W4FLDSZ" target="_blank">visualizar</a> </li>
-
-          <li class="w3-padding-16">Autor do livro Ransonware: Vulnerabilidades e Ataques em 2020 (Amazon) <br>
-          <a href="https://www.amazon.com.br/Ransonware-Vulnerabilidades-Ataques-em-2020-ebook/dp/B08Q8SJ7KH/ref=sr_1_7?dib=eyJ2IjoiMSJ9.m3yVPuA5ACNokSWNaz1oFO9TwEfs21L98FFcO7LkJMDXIMzynbPwGYLIOsH7Ayt_Le8rxhpQx8HWhZ0TIZQyv4-lVRl9L1HtCabuqi4bYwM.g85TZsisKzhERj6p2SDFG7v4OBSZij62xiY4ShmovGs&dib_tag=se&qid=1740053887&refinements=p_27%3ALeonardo+Lima+Aguiar&s=digital-text&sr=1-7&text=Leonardo+Lima+Aguiar" target="_blank">visualizar</a> </li>
-
-          <li class="w3-padding-16"> Finalista do XVIII Prêmios Sul-Mato-Grossense de Inovação em Gestão Pública  <br>
-          <a href="https://www.escolagov.ms.gov.br/inscricoes-para-o-xviii-premios-sul-mato-grossense-de-inovacao-em-gestao-publica-encerram-com-resultados-positivos/" target="_blank">visualizar</a> </li>
-
-          <li class="w3-padding-16"> Canal no Youtube  <br>
-          <a href="https://www.youtube.com/@prof.aguiar-segurancaedefe9287/videos" target="_blank">visualizar</a> </li>
-
-	  <li class="w3-padding-16"> Instagram  <br>
-          <a href="https://www.instagram.com/leonardolimaaguiarms/" target="_blank">visualizar</a> </li>
-
-          <li class="w3-padding-16">
-            
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-
-  </div>
-  </div>
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contato</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Whatsapp: +55 (67) 99214-1007</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: aguiarinteligencia@gmail.com</p>
-    </div><br>
-  <!-- End Contact Section -->
-  </div>
-  
-<!-- END PAGE CONTENT -->
+    <div class="w3-content w3-padding-64" id="contact">
+        <h2 class="w3-text-light-grey">Contato</h2>
+        <hr class="w3-opacity">
+        <p><i class="fa fa-phone w3-text-white"></i> WhatsApp: +55 (67) 99214-1007</p>
+        <p><i class="fa fa-envelope w3-text-white"></i> Email: aguiarinteligencia@gmail.com</p>
+    </div>
 </div>
 
 </body>
